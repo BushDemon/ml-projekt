@@ -2,10 +2,7 @@ from pathlib import Path
 import pandas as pd
 
 
-def high_confidence_wrongs(
-    preds_csv: Path,
-    percentile: float = 0.9,
-):
+def high_confidence_wrongs(preds_csv, percentile = 0.9):
     df = pd.read_csv(preds_csv)
 
     wrong = df[df["y_true"] != df["y_pred"]].copy()
@@ -42,15 +39,9 @@ def high_confidence_wrongs(
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-run_dir = BASE_DIR / "results" / "20260106-145223_exp2_extratrees"
+run_dir = BASE_DIR / "results" / "20260105-171946_exp1_pca_rf"
 
 # TEST
-hc_test = high_confidence_wrongs(
-    run_dir / "preds_test.csv",
-    percentile=0.9
-)
+hc_test = high_confidence_wrongs(run_dir / "preds_test.csv",percentile=0.9)
 # VAL
-hc_val = high_confidence_wrongs(
-    run_dir / "preds_val.csv",
-    percentile=0.9
-)
+hc_val = high_confidence_wrongs(run_dir / "preds_val.csv",percentile=0.9)

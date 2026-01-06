@@ -13,12 +13,12 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-def load_config(path: str) -> dict:
+def load_config(path):
     with open(path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
-def make_run_dir(cfg: dict) -> Path:
+def make_run_dir(cfg):
     out_root = BASE_DIR / cfg["run"]["output_dir"]
     out_root.mkdir(parents=True, exist_ok=True)
 
@@ -28,13 +28,13 @@ def make_run_dir(cfg: dict) -> Path:
     return run_dir
 
 
-def load_local_dataset(data_dir: Path):
+def load_local_dataset(data_dir):
     X = np.load(data_dir / "X.npy")
     y = np.load(data_dir / "y.npy")
     return X, y
 
 
-def load_splits(splits_dir: Path):
+def load_splits(splits_dir):
     idx_train = np.load(splits_dir / "idx_train.npy")
     idx_val = np.load(splits_dir / "idx_val.npy")
     idx_test = np.load(splits_dir / "idx_test.npy")
