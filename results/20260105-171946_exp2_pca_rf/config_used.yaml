@@ -1,0 +1,14 @@
+run:
+  name: exp2_pca_rf
+  output_dir: results
+  random_state: 67
+dataset:
+  local_dir: data
+pca:
+  whiten: false
+  n_components: 200
+model:
+  n_estimators: 300
+  max_depth: null
+  min_samples_leaf: 1
+  n_jobs: -1

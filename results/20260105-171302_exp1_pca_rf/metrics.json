@@ -1,0 +1,9 @@
+{
+  "val_accuracy": 0.8658035714285715,
+  "test_accuracy": 0.8671428571428571,
+  "n_train": 44800,
+  "n_val": 11200,
+  "n_test": 14000,
+  "pca_n_components": 100,
+  "pca_whiten": false
+}

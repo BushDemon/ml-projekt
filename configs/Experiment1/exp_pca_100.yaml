@@ -7,7 +7,7 @@ dataset:
   local_dir: data
 
 pca:
-  enabled: true
+  whiten: false
   n_components: 100
 
 model:

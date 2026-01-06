@@ -6,7 +6,7 @@ import yaml
 from sklearn.model_selection import train_test_split
 
 
-def main():
+def split_data():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to YAML config")
     args = parser.parse_args()
@@ -57,4 +57,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    split_data()

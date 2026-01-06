@@ -42,7 +42,7 @@ def high_confidence_wrongs(
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-run_dir = BASE_DIR / "results" / "20260105-144156_baseline_rf"
+run_dir = BASE_DIR / "results" / "20260105-171946_exp2_pca_rf"
 
 # TEST
 hc_test = high_confidence_wrongs(
