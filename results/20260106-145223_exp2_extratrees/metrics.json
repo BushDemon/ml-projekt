@@ -1,0 +1,11 @@
+{
+  "val_accuracy": 0.8800892857142857,
+  "test_accuracy": 0.8792142857142857,
+  "n_train": 44800,
+  "n_val": 11200,
+  "n_test": 14000,
+  "model": "ExtraTreesClassifier",
+  "n_estimators": 500,
+  "max_depth": null,
+  "min_samples_leaf": 1
+}

@@ -1,0 +1,13 @@
+run:
+  name: exp2_extratrees
+  output_dir: results
+  random_state: 67
+
+dataset:
+  local_dir: data
+
+model:
+  n_estimators: 500
+  max_depth: null
+  min_samples_leaf: 1
+  n_jobs: -1
